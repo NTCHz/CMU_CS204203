@@ -6,6 +6,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 	"strings"
 )
@@ -15,10 +16,10 @@ func twosComplToInt(x string) int64 {
 	var result int64 = 0
 	var j int64 = int64(len(x)) - 2
 	var front int64 = 0
-
+	fmt.Println(int64(x[0]))
 	// calculate the two's complement to integer
 	if x[0] == '1' {
-		front = (int64(x[0]) - int64('0')) * int64(math.Pow(2, float64(j+1))) * -1
+		front = (int64(x[0])) * int64(math.Pow(2, float64(j+1))) * -1
 	} else {
 		front = (int64(x[0]) - int64('0')) * int64(math.Pow(2, float64(j+1)))
 	}
