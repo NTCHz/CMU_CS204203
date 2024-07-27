@@ -1,0 +1,2 @@
+10 6
+The cat in the hat sat on the mat.

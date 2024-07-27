@@ -9,6 +9,7 @@ import (
 )
 
 const BIT_LEN = 16
+
 func main() {
 
 	var x float32
