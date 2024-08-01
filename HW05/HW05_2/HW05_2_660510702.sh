@@ -5,7 +5,14 @@
 # 204203 Sec 001
 
 local_maxima() {
-   echo "$1"
+    arr=($1)
+    count=0
+    for (( i=1; i<${#arr[@]}-1; i++ )); do
+        if [ ${arr[i]} -gt ${arr[i-1]} ] && [ ${arr[i]} -gt ${arr[i+1]} ]; then
+            count=$((count+1))
+        fi
+    done
+    echo $count
 }
 
 # Main script
